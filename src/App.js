@@ -1,3 +1,9 @@
-const App =() => "Hello there, yes kunal m here !!";
+import Counter from "./container/Counter"
+
+const App =() => (
+    <>
+        <Counter />
+    </>
+);
 
 export default App;
