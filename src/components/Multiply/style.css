@@ -12,3 +12,23 @@ input {
 .equalto {
     margin-left: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .multiply-wrapper {
+        display: block !important;
+        margin-right: 26px !important;
+    }
+    .multiply-wrapper input{
+      display: block;
+      width: 100%;
+    }
+    .multiply-wrapper span {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      .equalto {
+        margin-left: 40px !important;
+        margin-top: 10px !important;
+      }
+  }
