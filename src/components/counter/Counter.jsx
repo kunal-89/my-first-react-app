@@ -1,8 +1,7 @@
-import "./style.css"
+import "./style.css";
 
 const Counter = ({actions,counter,dispatch}) => {
     const { increment, decrement } = actions;
-    console.log("test",counter);
     return (
         <div className="counter-wrapper">
             <button onClick={() => dispatch(increment())}>+</button>

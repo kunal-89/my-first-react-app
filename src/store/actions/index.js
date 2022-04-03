@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT } from "../types/types";
+import { INCREMENT, DECREMENT, MULTIPLY } from "../types/types";
 
 export function increment() {
     return {
@@ -9,5 +9,12 @@ export function increment() {
 export function decrement() {
     return {
         type: DECREMENT
+    }
+}
+
+export function multiply({firstNo,secondNo}) {
+    return {
+        type: MULTIPLY,
+        payload: {firstNo,secondNo}
     }
 }
