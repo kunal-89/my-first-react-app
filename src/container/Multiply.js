@@ -1,5 +1,5 @@
 import { useSelector,useDispatch } from 'react-redux';
-import MultiplyComponent from '../components/Multiply/Multiply';
+import MultiplyComponent from '../components/multiply/Multiply';
 import { multiply } from '../store/actions';
 const Multiply = () => {
     const multiple = useSelector((state) => state.multiple);
