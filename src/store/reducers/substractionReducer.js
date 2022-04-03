@@ -1,17 +1,12 @@
-import { INCREMENT, DECREMENT, RESET } from "../types/types"
+import { SUBTRACTION, RESET } from "../types/types"
 import { initialState } from "./initionalSatate";
 
 const index = (state = initialState, action) => {
     switch (action.type) {
-        case INCREMENT:
+        case SUBTRACTION:
             return {
                 ...state,
-                count: state.count + 1
-            }
-        case DECREMENT:
-            return {
-                ...state,
-                count: state.count - 1
+                minus: parseInt(action.payload.firstNo) - parseInt(action.payload.secondNo)
             }
         case RESET:
             return {

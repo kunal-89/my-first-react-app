@@ -1,18 +1,8 @@
-import { INCREMENT, DECREMENT, RESET } from "../types/types"
+import { RESET } from "../types/types"
 import { initialState } from "./initionalSatate";
 
 const index = (state = initialState, action) => {
     switch (action.type) {
-        case INCREMENT:
-            return {
-                ...state,
-                count: state.count + 1
-            }
-        case DECREMENT:
-            return {
-                ...state,
-                count: state.count - 1
-            }
         case RESET:
             return {
                 ...state,
@@ -24,3 +14,5 @@ const index = (state = initialState, action) => {
 }
 
 export default index;
+
+// https://stackoverflow.com/questions/34419809/redux-is-there-any-way-to-access-store-tree-in-reducer

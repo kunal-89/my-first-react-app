@@ -4,7 +4,7 @@ import { reset } from '../store/actions';
 const Reset = () => {
     const dispatch = useDispatch()
     return (
-        <ResetComponent reset={reset} dispatch={dispatch}/>
+        <ResetComponent reset={reset} dispatch={dispatch} />
     );
 }
 export default Reset;

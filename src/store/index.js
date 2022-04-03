@@ -1,4 +1,6 @@
 import { createStore } from 'redux';
-import counterReducer from './reducers/counterReducer';
+import {rootReducers} from './reducers';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-export const store = createStore(counterReducer);
+export const store = createStore(rootReducers, composeWithDevTools());
+window.store = store;
