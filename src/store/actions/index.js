@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, MULTIPLY, ADDITION, SUBTRACTION} from "../types/types";
+import { INCREMENT, DECREMENT, MULTIPLY, ADDITION, SUBTRACTION, RESET} from "../types/types";
 
 export function increment() {
     return {
@@ -30,5 +30,11 @@ export function subtract({firstNo,secondNo}) {
     return {
         type: SUBTRACTION,
         payload: {firstNo,secondNo}
+    }
+}
+
+export function reset() {
+    return {
+        type: RESET
     }
 }

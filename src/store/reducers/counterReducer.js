@@ -1,10 +1,9 @@
-import { INCREMENT, DECREMENT, MULTIPLY, ADDITION, SUBTRACTION} from "../types/types"
+import { INCREMENT, DECREMENT, MULTIPLY, ADDITION, SUBTRACTION, RESET} from "../types/types"
 const initialState = { 
     count: 0,
     multiple: 0,
     sum: 0,
     minus: 0
-
 }
 
 const index = (state = initialState, action) => {
@@ -33,6 +32,14 @@ const index = (state = initialState, action) => {
             return {
                 ...state,
                 minus: parseInt(action.payload.firstNo) -  parseInt(action.payload.secondNo)
+            }
+            case RESET:
+            return  { 
+                count: 0,
+                multiple: 0,
+                sum: 0,
+                minus: 0
+            
             }
         default:
             return state
