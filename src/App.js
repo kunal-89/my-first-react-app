@@ -12,27 +12,36 @@ const App = () => {
         setSelected(e.target.value);
     }
     return (
-        <div>
-            <form>
-                <label htmlFor="functions">Choose a Function:</label>
-                <select name="functions" id="functions" onChange={select}>
-                    <option value="counter">Counter</option>
-                    <option value="addition">Addition</option>
-                    <option value="subtraction">Subtraction</option>
-                    <option value="multiplication">Multiplication</option>
-                </select>
-            </form>
-            {
-                selected === "counter" 
-                    ? <Counter />
-                    : selected === "addition" 
-                        ? <Addition />
-                        : selected === "subtraction" 
-                            ? <Subtraction />
-                            :  <Multiply />
-            }
-            <Reset />
-            <Table />
+        <div className="main-wrapper">
+            <div className="form-wrapper">
+                <form>
+                    <label htmlFor="functions">Choose a Function:</label>
+                    <select name="functions" id="functions" onChange={select}>
+                        <option value="counter">Counter</option>
+                        <option value="addition">Addition</option>
+                        <option value="subtraction">Subtraction</option>
+                        <option value="multiplication">Multiplication</option>
+                    </select>
+                </form>
+            </div>
+            <div className="app-wrapper">
+                {
+                    selected === "counter"
+                        ? <Counter />
+                        : selected === "addition"
+                            ? <Addition />
+                            : selected === "subtraction"
+                                ? <Subtraction />
+                                : <Multiply />
+                }
+            </div>
+            <div className="reset-wrapper">
+                <Reset />
+            </div>
+            <div className="table-wrapper">
+                <Table />
+            </div>
+
         </div>
     )
 };
